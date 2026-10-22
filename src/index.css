@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.particle-fallback { padding: 4rem 1rem; color: #a5f3fc; text-align: center; }
+.building-stage { min-height: calc(100dvh - 90px); }
+.particle-composition { position: relative; margin-top: 80px; height: max(580px, calc(100dvh - 270px)); }
+.particle-building { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+@media (max-width: 640px) {
+  .particle-composition { height: max(350px, calc(100dvh - 330px)); }
+}
+
+.relief-view { position: relative; width: 100%; height: max(520px, calc(100dvh - 260px)); cursor: grab; touch-action: none; }
+.relief-view:active { cursor: grabbing; }
+@media (max-width: 640px) { .relief-view { height: 420px; } }
+
+.face-hologram-view { height: max(540px, calc(100dvh - 240px)); width: 100%; position: relative; cursor: grab; touch-action: none; background: radial-gradient(ellipse at center, rgba(6,182,212,0.06), transparent 65%); }
+.face-hologram-view:active { cursor: grabbing; }
+@media (max-width: 640px) { .face-hologram-view { height: 520px; } }
+
+.office-page { height: 1200svh; color: #2e2b27; background: #f4eee4; }
+.office-sticky { position: sticky; top: 0; height: 100svh; min-height: 620px; overflow: clip; }
+.office-header { position: absolute; z-index: 10; top: 0; left: 0; right: 0; padding: 28px 5%; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+.office-back { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; }
+.office-nav { background: #eee3d1; padding: 12px 30px; border-radius: 40px; font-size: 12px; font-weight: 700; letter-spacing: .07em; }
+.office-pill { background: #ff8705; color: white; padding: 15px 24px; border-radius: 40px; font-size: 11px; font-weight: 800; }
+.office-copy { position: absolute; z-index: 3; left: 6%; top: 34%; width: 31%; pointer-events: none; }
+.office-eyebrow { font-size: 10px; letter-spacing: .2em; font-weight: 700; color: #8c7962; margin-bottom: 20px; }
+.office-copy h1 { font-size: clamp(34px, 4.5vw, 76px); font-weight: 850; line-height: 1.05; letter-spacing: -.055em; }
+.office-label { display: inline-block; margin: 22px 0 8px; padding: 8px 12px; background: #263d70; color: white; transform: rotate(-4deg); font: 700 12px monospace; letter-spacing: .04em; }
+.office-description { margin-top: 20px; max-width: 280px; font-size: 13px; line-height: 1.8; color: #867a6b; }
+.office-scroll { display: flex; gap: 10px; align-items: center; margin-top: 26px; font-size: 12px; font-weight: 600; }
+.office-progress { margin-top: 14px; width: 140px; height: 3px; background: #e0d3bf; border-radius: 4px; overflow: hidden; }
+.office-progress > div { height: 100%; background: #ee9414; }
+.office-scene { position: absolute; inset: 0; z-index: 5; overflow: visible; }
+.office-scene canvas { display: block; max-width: none; max-height: none; }
+.office-caption { position: absolute; z-index: 3; bottom: 23px; left: 6%; font-size: 8px; letter-spacing: .16em; color: #a89a88; }
+.office-error { padding: 60px; color: #8d6040; }
+@media (max-width: 700px) {
+  .office-header { padding: 18px 22px; }
+  .office-nav { display: none; }
+  .office-pill { font-size: 9px; padding: 11px 15px; }
+  .office-sticky { min-height: 640px; }
+  .office-copy { top: 15%; left: 7%; width: 86%; }
+  .office-copy h1 { font-size: 39px; }
+  .office-eyebrow { margin-bottom: 12px; }
+  .office-label { margin-top: 12px; font-size: 10px; }
+  .office-description { display: none; }
+  .office-scroll { margin-top: 15px; }
+  .office-scene { inset: 0; }
+  .office-caption { bottom: 12px; }
+}
+
+.standing-section { position: absolute; z-index: 3; left: 6%; top: 34%; width: 33%; pointer-events: none; }
+.standing-section h2 { font-size: clamp(34px, 4.5vw, 76px); font-weight: 850; line-height: 1.05; letter-spacing: -.055em; }
+@media (max-width: 700px) {
+  .standing-section { top: 15%; left: 7%; width: 86%; }
+  .standing-section h2 { font-size: 39px; }
+}
+
+.office-original-content { position: absolute; inset: 0; z-index: 6; pointer-events: none; will-change: transform; }
+.office-original-content .office-back { pointer-events: auto; }
+.standing-layer { position: absolute; inset: 0; z-index: 6; pointer-events: none; color: #19344b; }
+.standing-layer .office-nav { background: #c3d8ee; }
+.standing-layer .office-pill { background: #2873a8; }
+.standing-layer .office-label { background: #205b88; }
+.standing-layer .office-eyebrow, .standing-layer .office-description { color: #55758c; }
+.standing-layer .standing-section { width: 40%; }
+.standing-layer .standing-section h2 { font-size: clamp(35px, 4.1vw, 70px); }
+@media (max-width: 700px) {
+  .standing-layer .standing-section { width: 86%; }
+  .standing-layer .standing-section h2 { font-size: 36px; }
+}
+
+.office-two-scenes { background: #08275f; }
+.office-background { position: absolute; inset: 0; z-index: 0; background: #f4eee4; border-radius: 0 0 0 52px; will-change: transform; }
+.office-two-scenes .standing-layer { color: #f5f8ff; }
+.office-two-scenes .standing-layer .office-nav { background: #153b74; }
+.office-two-scenes .standing-layer .office-pill { background: #3e8bd4; }
+.office-two-scenes .standing-layer .office-label { background: #3478bd; }
+.office-two-scenes .standing-layer .office-eyebrow, .office-two-scenes .standing-layer .office-description { color: #bad3f3; }
+
+.standing-layer .office-description { font-size: 15px; max-width: 330px; }
+.standing-layer .office-eyebrow { font-size: 12px; }
+.standing-layer .office-label { font-size: 14px; }
+
+.laboratory-layer { position:absolute;inset:0;z-index:6;pointer-events:none;color:#effaff; }
+.laboratory-layer .office-back { pointer-events:auto; }
+.laboratory-layer .office-nav { background:#174677; }
+.laboratory-layer .office-pill { background:#2375b3; }
+.laboratory-copy { position:absolute;right:5%;top:37%;width:30%; }
+.laboratory-copy h2 { font-size:clamp(36px,4.5vw,74px);font-weight:850;line-height:1.04;letter-spacing:-.055em; }
+.laboratory-copy .office-description { color:#b0d7ee;max-width:300px; }
+.laboratory-copy .office-eyebrow { color:#b0d7ee; }
+.laboratory-copy .office-label { background:#246d9e; }
+@media(max-width:700px){.laboratory-copy{top:14%;left:7%;width:86%;}.laboratory-copy h2{font-size:38px;}.laboratory-copy .office-description{max-width:260px;font-size:12px;}}
