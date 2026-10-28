@@ -142,7 +142,7 @@ export default function App() {
       <div className="relative z-10 min-h-screen flex flex-col">
         {/* Header */}
         <header className="px-6 py-4 border-b border-white/5 backdrop-blur-sm bg-slate-950/50">
-          <div className="max-w-7xl mx-auto flex items-center gap-3">
+          <div className="max-w-7xl mx-auto flex flex-wrap items-center gap-3">
             <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 shadow-lg shadow-cyan-500/20">
               <Globe2 className="w-6 h-6 text-white" />
             </div>
@@ -165,6 +165,10 @@ export default function App() {
             <a href="#/aria" className="inline-flex shrink-0 items-center rounded-lg border border-violet-300/30 bg-violet-500/10 px-3 py-2 text-sm font-medium text-violet-100 hover:bg-violet-500/20">Aria 3D</a>
             <a href="#/robo" className="inline-flex shrink-0 items-center rounded-lg border border-cyan-300/30 bg-cyan-500/10 px-3 py-2 text-sm font-medium text-cyan-100 hover:bg-cyan-500/20">Robô interativo</a>
             <a href="#/escritorio" className="inline-flex shrink-0 items-center rounded-lg border border-orange-300/30 bg-orange-500/10 px-3 py-2 text-sm font-medium text-orange-100 hover:bg-orange-500/20">Escritório 3D</a>
+            <a href="#/colaboracao" className="inline-flex shrink-0 items-center rounded-lg border border-fuchsia-300/30 bg-fuchsia-500/10 px-3 py-2 text-sm font-medium text-fuchsia-100 hover:bg-fuchsia-500/20">Estúdio de dados 3D</a>
+            <a href="#/estudio-2d" className="inline-flex shrink-0 items-center rounded-lg border border-pink-300/30 bg-pink-500/10 px-3 py-2 text-sm font-medium text-pink-100 hover:bg-pink-500/20">Estúdio animado 2D</a>
+            <a href="#/sala-trabalho" className="inline-flex shrink-0 items-center rounded-lg border border-amber-300/30 bg-amber-500/10 px-3 py-2 text-sm font-medium text-amber-100 hover:bg-amber-500/20">Sala de trabalho 3D</a>
+            <a href="#/bosque" className="inline-flex shrink-0 items-center rounded-lg border border-purple-300/30 bg-purple-500/10 px-3 py-2 text-sm font-medium text-purple-100 hover:bg-purple-500/20">Bosque encantado</a>
           </div>
         </header>
 

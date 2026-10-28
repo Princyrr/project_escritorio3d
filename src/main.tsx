@@ -1,6 +1,10 @@
 import { StrictMode, useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
+import EnchantedForestPage from './components/EnchantedForestPage';
+import WorkroomPage from './components/WorkroomPage';
+import AnimatedStudioPage from './components/AnimatedStudioPage';
+import CollaborationPage from './components/CollaborationPage';
 import './index.css';
 import BuildingPage from './components/BuildingPage';
 import ReliefPage from './components/ReliefPage';
@@ -16,6 +20,10 @@ function Pages() {
     window.addEventListener('hashchange', navigate);
     return () => window.removeEventListener('hashchange', navigate);
   }, []);
+  if (path === '#/bosque') return <EnchantedForestPage />;
+  if (path === '#/sala-trabalho') return <WorkroomPage />;
+  if (path === '#/estudio-2d') return <AnimatedStudioPage />;
+  if (path === '#/colaboracao') return <CollaborationPage />;
   if (path === '#/robo') return <MouseRobotPage />;
   if (path === '#/escritorio') return <ScrollOfficePage />;
   if (path === '#/aria') return <AriaHologramPage />;
