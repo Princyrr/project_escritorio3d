@@ -169,6 +169,7 @@ export default function App() {
             <a href="#/estudio-2d" className="inline-flex shrink-0 items-center rounded-lg border border-pink-300/30 bg-pink-500/10 px-3 py-2 text-sm font-medium text-pink-100 hover:bg-pink-500/20">Estúdio animado 2D</a>
             <a href="#/sala-trabalho" className="inline-flex shrink-0 items-center rounded-lg border border-amber-300/30 bg-amber-500/10 px-3 py-2 text-sm font-medium text-amber-100 hover:bg-amber-500/20">Sala de trabalho 3D</a>
             <a href="#/bosque" className="inline-flex shrink-0 items-center rounded-lg border border-purple-300/30 bg-purple-500/10 px-3 py-2 text-sm font-medium text-purple-100 hover:bg-purple-500/20">Bosque encantado</a>
+            <a href="#/casa-encantada" className="inline-flex shrink-0 items-center rounded-lg border border-rose-300/30 bg-rose-500/10 px-3 py-2 text-sm font-medium text-rose-100 hover:bg-rose-500/20">Casa encantada 3D</a>
           </div>
         </header>
 

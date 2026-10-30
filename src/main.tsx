@@ -2,6 +2,7 @@ import { StrictMode, useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
 import EnchantedForestPage from './components/EnchantedForestPage';
+import MushroomCottagePage from './components/MushroomCottagePage';
 import WorkroomPage from './components/WorkroomPage';
 import AnimatedStudioPage from './components/AnimatedStudioPage';
 import CollaborationPage from './components/CollaborationPage';
@@ -20,6 +21,7 @@ function Pages() {
     window.addEventListener('hashchange', navigate);
     return () => window.removeEventListener('hashchange', navigate);
   }, []);
+  if (path === '#/casa-encantada') return <MushroomCottagePage />;
   if (path === '#/bosque') return <EnchantedForestPage />;
   if (path === '#/sala-trabalho') return <WorkroomPage />;
   if (path === '#/estudio-2d') return <AnimatedStudioPage />;
